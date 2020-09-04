@@ -2,7 +2,7 @@
 
 I have attached PDF of the html page output as tested, so you can see the data populated layout of HTML served by Flask. The filename is Mission to Mars.pdf
 
-[RESULTS](./Mission to Mars.pdf)
+[RESULTS](https://github.com/adesai1973/web-scraping-challenge/blob/master/Mission%20to%20Mars.pdf)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Web Scraping Homework - Mission to Mars
