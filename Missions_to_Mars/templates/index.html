@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p>We will scrape 3 URLs to collect data, load into postgreSQL and load into this html template...</p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+    <h3>Latest Mars News</h3>
+    <h4>{{ mars_news.news_title }}</h4>
+    <h5>{{ mars_news.news_p }}</h5>
+  </div>
+  <div class="container-fluid">
+    <div class="row" style="margin: auto">       
+        <div class="col-md-8">
+          <h3>Featured Mars Image</h3>
+          <img class="float-left img-fluid textWrap" src={{ mars_image.image_url }} alt='mars image'>
+        </div>
+        <div class="col-md-4">
+          <h3>Mars Facts</h3>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <td>{{ mars_facts[0]['key'] }}</td>
+                  <td>{{ mars_facts[0]['value'] }}</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{ mars_facts[1]['key'] }}</td>
+                  <td>{{ mars_facts[1]['value'] }}</td>
+                </tr>
+                <tr>
+                  <td>{{ mars_facts[2]['key'] }}</td>
+                  <td>{{ mars_facts[2]['value'] }}</td>
+                </tr>
+                <tr>
+                  <td>{{ mars_facts[3]['key'] }}</td>
+                  <td>{{ mars_facts[3]['value'] }}</td>
+                </tr>
+                <tr>
+                  <td>{{ mars_facts[4]['key'] }}</td>
+                  <td>{{ mars_facts[4]['value'] }}</td>
+                </tr>
+                <tr>
+                  <td>{{ mars_facts[5]['key'] }}</td>
+                  <td>{{ mars_facts[5]['value'] }}</td>
+                </tr>
+                <tr>
+                  <td>{{ mars_facts[6]['key'] }}</td>
+                  <td>{{ mars_facts[6]['value'] }}</td>
+                </tr>
+                <tr>
+                  <td>{{ mars_facts[7]['key'] }}</td>
+                  <td>{{ mars_facts[7]['value'] }}</td>
+                </tr>
+                <tr>
+                  <td>{{ mars_facts[8]['key'] }}</td>
+                  <td>{{ mars_facts[8]['value'] }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+      <div class="row" style="margin: auto" >
+        <h3 style="text-align:center;">Mars Hemispheres</h3>
+      </div>
+      <div class="row" style="margin: auto">
+        <div class="col-md-6">
+          <img class="float-left img-fluid textWrap" src="{{ mars_hems['img_url1'] }}" alt='mars image'>
+          <h4 style="text-align:center;">{{ mars_hems['title1'] }} </h4>
+        </div>
+        <div class="col-md-6">
+          <img class="float-left img-fluid textWrap" src="{{ mars_hems['img_url2'] }}" alt='mars image'>
+          <h4 style="text-align:center;">{{ mars_hems['title2'] }} </h4>
+        </div>
+      </div>
+      <div class="row" style="margin: auto">
+        <div class="col-md-6">
+          <img class="float-left img-fluid textWrap" src="{{ mars_hems['img_url3'] }}" alt='mars image'>
+          <h4 style="text-align:center;">{{ mars_hems['title3'] }} </h4>
+        </div>
+        <div class="col-md-6">
+          <img class="float-left img-fluid textWrap" src="{{ mars_hems['img_url4'] }}" alt='mars image'>
+          <h4 style="text-align:center;">{{ mars_hems['title4'] }} </h4>
+        </div>
+      </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+h1 {
+    color: blue;
+}
+
+.textWrap {
+    float: left;
+    margin: 1px;
+    min-width: 80%;
+    max-width: 90%
+}
